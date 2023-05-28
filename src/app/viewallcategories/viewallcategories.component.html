@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+      <div class="col-md-3">
+
+      </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                All Categories
+                </div>
+                <br/>
+                <div class="row">
+                   
+                        <div class="col-md-2" style="padding-left: 40px;">  Search:</div>
+                        <div class="col-md-9"><input type="text" name="ename" [(ngModel)]="ename" (ngModelChange)="search()" class="form-control"/></div>
+                   <div class="col-md-1"></div>
+                </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <td>Category Name</td>
+            <td>Action</td>
+        </tr>
+        <tr *ngFor="let i of category">
+            <td>{{i.categoryname}}</td>
+            <td><input type="button" value="Select" (click)="action(i.categoryid)" class="btn btn-warning"/></td>
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>

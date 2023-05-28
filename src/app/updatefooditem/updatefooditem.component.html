@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                Update FoodItem
+                </div>
+        <div class="card-body">
+        <form [formGroup]="foodform" (ngSubmit)="action()">
+            <label>Product Name</label>
+            <input type="text" formControlName="foodname" [(ngModel)]="fooditem.foodname" class="form-control"/>
+            <label>Product Price</label>
+            <input type="text" formControlName="price" [(ngModel)]="fooditem.price" class="form-control"/>
+            <label>Product Description</label>
+            <input type="text" formControlName="fooddescription" [(ngModel)]="fooditem.fooddescription" class="form-control"/>
+            <label>Discount</label>
+            <input type="text" formControlName="discount" [(ngModel)]="fooditem.discount" class="form-control"/>
+
+            <label>Category</label>
+          <select formControlName="select"  class="form-control">
+            <option *ngFor="let i of category" value="{{i.categoryid}}">{{i.categoryname}}</option>
+          </select>
+            <br/>
+            <label>Type</label>
+            <select formControlName="type"  class="form-control">
+                <option *ngFor="let j of foodtype" value="{{j.typeid}}">{{j.typename}}</option>
+            </select>
+            <input type="submit" value="Update" class="btn btn-info"/>
+        </form>
+        </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</div>

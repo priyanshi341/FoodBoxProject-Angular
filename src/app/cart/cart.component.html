@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+     
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                All Products
+                </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <th width="20%" >Prduct Name</th>
+            <th width="20%" style="text-align: center;">Category</th>
+            <th width="10%" style="text-align: center;">Item Price</th>
+            <th width="10%" style="text-align: center;">Total Quantity</th>
+            <th width="20%" style="text-align: center;">Total Item price</th>
+            <th width="20%" style="text-align: center;">Action</th>
+        </tr>
+        <tr *ngFor="let i of selecteditem;let j=index">
+            <td width="10%" >{{i.food.foodname}}</td>
+           <td width="20%" style="text-align: center;">{{i.category.categoryname}}</td>
+            <td width="15%" style="text-align: center;">{{i.food.price}}</td>
+            <td width="15%" style="text-align: center;">{{i.totalquantity}}</td>
+            <td width="10%" style="text-align: center;">{{i.totalprice}}</td>
+            <td width="20%" style="text-align: center;"><input type="button" value="Delete" (click)="delete(j)" style="display: inline-block;width: 100%;" class="btn btn-danger"/></td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align: center;">
+                <input type="button" value="ORDER NOW" (click)="paynow()" class="btn btn-info"/>
+            </td>
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

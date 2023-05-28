@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+     
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center;">
+              <input type="button" (click)="action()" value="click me">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <form [formGroup]="form">
+                    <select (change)="action1()" formControlName="select">
+                        <option value="1">1</option>
+                    </select>
+                </form>
+                </div>
+            </div>
+            <div class="card" *ngIf="chk">
+                <div class="card-header">
+                All Products
+                </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <th width="20%" >Prduct Name</th>
+            <th width="20%" >Description</th>
+            <th width="10%" style="text-align: center;">Price</th>
+            <th width="10%" style="text-align: center;">Discount</th>
+            <th width="20%" style="text-align: center;">Category</th>
+            <th width="20%" style="text-align: center;">Action</th>
+        </tr>
+        <tr *ngFor="let i of food">
+            <td width="10%" >{{i.foodname}}</td>
+            <td width="30%" >{{i.fooddescription}}</td>
+            <td width="15%" style="text-align: center;">{{i.price}}</td>
+            <td width="15%" style="text-align: center;">{{i.discount}}%</td>
+            <td width="10%" style="text-align: center;">
+               {{i.category.categoryname}}</td>
+            <td width="20%" style="text-align: center;"><input type="button" value="Add To Cart" (click)="action(i.foodid)" style="display: inline-block;width: 100%;" class="btn btn-warning"/></td>
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

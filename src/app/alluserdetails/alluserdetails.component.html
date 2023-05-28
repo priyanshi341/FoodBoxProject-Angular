@@ -1,0 +1,45 @@
+
+<div class="container-fluid" >
+    <br/>
+    <div class="row">
+     
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+              User details
+                </div>
+                <br/>
+                <div class="row">
+                   
+                    <div class="col-md-2" style="padding-left: 90px;">  Search:</div>
+                    <div class="col-md-9"><input type="text" name="ename" [(ngModel)]="ename" (ngModelChange)="search()" class="form-control"/></div>
+               <div class="col-md-1"></div>
+            </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+           
+            <th  style="text-align: center;">User Id</th>
+            <th  style="text-align: center;"> Name</th>
+            <th  style="text-align: center;">Email</th>
+            <th  style="text-align: center;">Phone</th>
+            <th style="text-align: center;">Address</th>
+        </tr>
+        <tr *ngFor="let i of user">
+         
+           <td style="text-align: center;">{{i.userid}}</td>
+            <td style="text-align: center;">{{i.username}}</td>
+            <td  style="text-align: center;">{{i.useremail}}</td>
+            <td  style="text-align: center;">{{i.userphone}}</td>
+            <td  style="text-align: center;">{{i.useraddress}}</td>
+        </tr>
+        <tr>
+          
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

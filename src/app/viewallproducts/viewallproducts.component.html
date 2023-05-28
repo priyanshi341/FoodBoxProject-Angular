@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+     <div class="col-md-1" *ngFor="let j of foodtype">
+        <input type="button" style="border-radius: 10px;" class="btn btn-light" value="{{j.typename}}" (click)="buttonaction(j.typeid)"/>
+      
+     </div>
+     </div>
+<br/>
+     <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+               Items
+                </div>
+                <br/>
+                <div class="row">
+                   
+                    <div class="col-md-2" style="padding-left: 40px;">  Search:</div>
+                    <div class="col-md-9"><input type="text" name="ename" [(ngModel)]="ename" (ngModelChange)="search()" class="form-control"/></div>
+               <div class="col-md-1"></div>
+            </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <th width="20%" >Prduct Name</th>
+            <th width="20%" >Description</th>
+            <th width="10%" style="text-align: center;">Price</th>
+            <th width="10%" style="text-align: center;">Discount</th>
+            <th width="20%" style="text-align: center;">Quantity</th>
+            <th width="20%" style="text-align: center;">Action</th>
+        </tr>
+        <tr *ngFor="let i of food">
+            <td width="10%" >{{i.foodname}}</td>
+            <td width="30%" >{{i.fooddescription}}</td>
+            <td width="15%" style="text-align: center;">{{i.price}}</td>
+            <td width="15%" style="text-align: center;">{{i.discount}}%</td>
+            <td width="10%" style="text-align: center;">
+                <form [formGroup]="productform">
+                    <input type="number" formControlName="total" class="form-control"/>
+                </form></td>
+            <td width="20%" style="text-align: center;"><input type="button" value="Add To Cart" (click)="action(i.foodid)" style="display: inline-block;width: 100%;" class="btn btn-warning"/></td>
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

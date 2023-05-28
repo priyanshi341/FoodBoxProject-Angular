@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+         <div class="card">
+            <div class="card-header"><label>Total Payment</label></div>
+            <div class="card-body" style="text-align: center;">
+              <label style="font-weight: bold;font-size: larger;">
+                Total Amount:{{totalamount|currency:"INR"}}
+              </label>
+              <br/>
+              <input type="button" value="PAY NOW" (click)="paynow()" class="btn btn-success"/>
+            </div>
+         </div>
+        </div>
+    </div>
+</div>

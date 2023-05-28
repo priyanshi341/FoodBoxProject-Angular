@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FoodBoxProject"
+    }
+  },
+  "defaultProject": "FoodBoxProject",
+  "cli": {
+    "analytics": "f3726fd1-de8e-4e4f-82eb-3c88bb1536ab"
+  }
 }

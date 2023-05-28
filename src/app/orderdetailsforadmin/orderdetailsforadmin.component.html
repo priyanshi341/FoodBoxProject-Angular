@@ -1,0 +1,43 @@
+
+
+<div class="container-fluid" >
+    <br/>
+    <div class="row">
+     
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                Order Details
+                </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <th >Order Id</th>
+            <th >User Id</th>
+            <th >Prduct Name</th>
+            <th  style="text-align: center;">Category</th>
+            <th  style="text-align: center;">Item Price</th>
+            <th  style="text-align: center;">Total Quantity</th>
+            <th  style="text-align: center;">Total Item price</th>
+            <th style="text-align: center;">Date Of Order</th>
+        </tr>
+        <tr *ngFor="let i of orderecord">
+            <td>{{i.oid}}</td>
+            <td>{{i.userid}}</td>
+            <td>{{i.itemname}}</td>
+           <td style="text-align: center;">{{i.categoryname}}</td>
+            <td style="text-align: center;">{{i.itemprice}}</td>
+            <td  style="text-align: center;">{{i.quantity}}</td>
+            <td  style="text-align: center;">{{i.totalprice}}</td>
+            <td  style="text-align: center;">{{i.dateoforder}}</td>
+        </tr>
+        <tr>
+          
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

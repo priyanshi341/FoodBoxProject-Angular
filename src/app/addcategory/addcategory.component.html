@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                Add Category
+                </div>
+        <div class="card-body">
+        <form [formGroup]="categoryform" (ngSubmit)="action()">
+            <label>Category Name</label>
+            <input type="text" formControlName="categoryname" class="form-control"/>
+            <br/>
+            <input type="submit" value="Add" class="btn btn-info"/>
+        </form>
+        </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</div>

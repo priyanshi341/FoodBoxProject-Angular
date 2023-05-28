@@ -1,0 +1,74 @@
+<div class="container-fluid" *ngIf="chk1">
+    <br/>
+    <div class="row">
+     
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+               Current Order Detail
+                </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <th  >Prduct Name</th>
+            <th  style="text-align: center;">Category</th>
+            <th  style="text-align: center;">Item Price</th>
+            <th  style="text-align: center;">Total Quantity</th>
+            <th  style="text-align: center;">Total Item price</th>
+          
+        </tr>
+        <tr *ngFor="let i of selecteditems">
+            <td>{{i.food.foodname}}</td>
+           <td style="text-align: center;">{{i.category.categoryname}}</td>
+            <td style="text-align: center;">{{i.food.price}}</td>
+            <td  style="text-align: center;">{{i.totalquantity}}</td>
+            <td  style="text-align: center;">{{i.totalprice}}</td>
+          
+        </tr>
+      
+       </table>
+        </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+
+<div class="container-fluid" *ngIf="chk2">
+    <br/>
+    <div class="row">
+     
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+              Order details
+                </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <th  >Prduct Name</th>
+            <th  style="text-align: center;">Category</th>
+            <th  style="text-align: center;">Item Price</th>
+            <th  style="text-align: center;">Total Quantity</th>
+            <th  style="text-align: center;">Total Item price</th>
+            <th style="text-align: center;">Date Of Order</th>
+        </tr>
+        <tr *ngFor="let i of orderecord">
+            <td>{{i.itemname}}</td>
+           <td style="text-align: center;">{{i.categoryname}}</td>
+            <td style="text-align: center;">{{i.itemprice}}</td>
+            <td  style="text-align: center;">{{i.quantity}}</td>
+            <td  style="text-align: center;">{{i.totalprice}}</td>
+            <td  style="text-align: center;">{{i.dateoforder}}</td>
+        </tr>
+        <tr>
+          
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

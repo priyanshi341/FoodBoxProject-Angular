@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <label>Sign-Up</label>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="userform" (ngSubmit)="action()">
+                        <label>Username</label>
+                        <input type="text" class="form-control" formControlName="username"/>
+                        <label>Email</label>
+                        <input type="text" class="form-control" formControlName="useremail"/>
+                        <label>Address</label>
+                        <input type="text" class="form-control" formControlName="useraddress"/>
+                        <label>Phone No</label>
+                        <input type="text" class="form-control" formControlName="userphone"/>
+                        <label>Password</label>
+                        <input type="text" class="form-control" formControlName="userpassword"/>
+                       
+                        <br/>
+                        <input type="submit" class="btn btn-info" value="Sign-Up"/>
+
+                    </form>
+                </div>
+                <div class="card-footer" *ngIf="chk">
+                    {{msg}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

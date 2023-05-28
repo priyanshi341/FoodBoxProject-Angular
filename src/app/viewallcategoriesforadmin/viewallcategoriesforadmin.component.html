@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+      <div class="col-md-3">
+
+      </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center;">
+                <a href="/addcategory" style="font-size: larger;">Add Category</a>
+                </div>
+            </div>
+            <br/>
+            <div class="card">
+                <div class="card-header">
+                All Categories
+                </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <th style="text-align: center;">Category Name</th>
+            <th style="text-align: center;">Action</th>
+        </tr>
+        <tr *ngFor="let i of category">
+            <td style="text-align: center;">{{i.categoryname}}</td>
+            <td style="text-align: center;"><input type="button" value="Select" (click)="select(i.categoryid)"  class="btn btn-secondary"/>&nbsp;&nbsp; 
+                <input type="button" value="Update" (click)="update(i.categoryid)" class="btn btn-warning"/>
+                &nbsp;&nbsp; 
+                <input type="button" value="Delete" (click)="delete(i.categoryid)" class="btn btn-danger"/></td>
+        
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>

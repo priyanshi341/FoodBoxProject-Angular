@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+     
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center;">
+                <a href="/addfood" style="font-size: larger;">Add Product</a>
+                </div>
+            </div>
+            <br/>
+            <div class="card">
+                <div class="card-header">
+                All Products
+                </div>
+        <div class="card-body">
+       <table class="table table striped">
+        <tr>
+            <th width="20%" >Prduct Name</th>
+            <th width="20%" >Description</th>
+            <th width="10%" style="text-align: center;">Price</th>
+            <th width="10%" style="text-align: center;">Discount</th>
+            <th width="10%" style="text-align: center;">Category</th>
+            <th width="20%" style="text-align: center;">Action</th>
+        </tr>
+        <tr *ngFor="let i of food">
+            <td width="10%" >{{i.foodname}}</td>
+            <td width="30%" >{{i.fooddescription}}</td>
+            <td width="10%" style="text-align: center;">{{i.price}}</td>
+            <td width="10%" style="text-align: center;">{{i.discount}}%</td>
+            <td width="10%" style="text-align: center;">{{i.category.categoryname}}</td>
+            <td width="30%" style="text-align: center;"><input type="button" value="Update" (click)="update(i.foodid)"  class="btn btn-warning"/>
+            &nbsp;&nbsp;&nbsp;<input type="button" value="Delete" (click)="delete(i.foodid)"  class="btn btn-danger"/></td>
+        </tr>
+       </table>
+        </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
